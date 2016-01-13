@@ -1,0 +1,99 @@
+{
+  "fileTypes": [
+    "dhcpd.conf"
+  ],
+  "patterns": [
+    {
+      "captures": {
+        "1": {
+          "name": "constant.language.cfgfile"
+        },
+        "2": {
+          "name": "string.cfgfile"
+        }
+      },
+      "match": "(zone|host|key)\\s([^{]+) "
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "constant.language.cfgfile"
+        },
+        "2": {
+          "name": "string.cfgfile"
+        },
+        "3": {
+          "name": "constant.language.cfgfile"
+        },
+        "4": {
+          "name": "string.cfgfile"
+        }
+      },
+      "match": "(subnet)\\s([^\\s]+)\\s(netmask)\\s([^\\s]+)"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.cfgfile"
+        },
+        "2": {
+          "name": "string.cfgfile"
+        }
+      },
+      "match": "(authoritative|primary|next-server|filename|ignore|algorithm|secret|log-facility|key)\\s*(.*);?"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.cfgfile"
+        },
+        "2": {
+          "name": "string.cfgfile"
+        }
+      },
+      "match": "(hardware ethernet|fixed-address|ddns-[a-z]+)\\s([^;]*);"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.cfgfile"
+        },
+        "2": {
+          "name": "string.cfgfile"
+        }
+      },
+      "match": "(ddns-[a-z-]+)\\s([^;]+)"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.cfgfile"
+        },
+        "2": {
+          "name": "string.cfgfile"
+        }
+      },
+      "match": "((?:option|range|host)\\s[a-z-]+)\\s*([^;]*);",
+      "name": "keyword.other.cfgfile"
+    },
+    {
+      "match": "^\\s*;.*",
+      "name": "comment.line"
+    },
+    {
+      "match": "^\\s*#.*",
+      "name": "comment.line"
+    },
+    {
+      "match": "^\\s*#+",
+      "name": "comment.block"
+    },
+    {
+      "match": "\\[.*\\]",
+      "name": "string"
+    }
+  ],
+  "uuid": "a9a80b1f-9bc9-4fe6-a723-116a297e9bed",
+  "name": "ISC DHCPD",
+  "scopeName": "source.dhcpd"
+}
