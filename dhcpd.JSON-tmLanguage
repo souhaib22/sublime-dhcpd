@@ -12,7 +12,7 @@
           "name": "string.cfgfile"
         }
       },
-      "match": "(zone|host|key)\\s([^{]+) "
+      "match": "(zone|host|class|pool|key)\\s([^{]+) "
     },
     {
       "captures": {
@@ -40,7 +40,7 @@
           "name": "string.cfgfile"
         }
       },
-      "match": "(authoritative|primary|next-server|filename|ignore|algorithm|secret|log-facility|key)\\s*(.*);?"
+      "match": "(authoritative|primary|next-server|filename|ignore|algorithm|secret|log-facility|include|range|key)\\s*(.*);?"
     },
     {
       "captures": {
