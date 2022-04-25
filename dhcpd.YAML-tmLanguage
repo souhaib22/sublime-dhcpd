@@ -4,7 +4,7 @@ patterns:
 - captures:
     '1': {name: constant.language.cfgfile}
     '2': {name: string.cfgfile}
-  match: '(zone|host|key)\s([^{]+) '
+  match: '(zone|host|class|pool|key)\s([^{]+) '
 - captures:
     '1': {name: constant.language.cfgfile}
     '2': {name: string.cfgfile}
@@ -14,7 +14,7 @@ patterns:
 - captures:
     '1': {name: keyword.cfgfile}
     '2': {name: string.cfgfile}
-  match: (authoritative|primary|next-server|filename|ignore|algorithm|secret|log-facility|key)\s*(.*);?
+  match: (authoritative|primary|next-server|filename|ignore|algorithm|secret|log-facility|include|range|key)\s*(.*);?
 - captures:
     '1': {name: keyword.cfgfile}
     '2': {name: string.cfgfile}
